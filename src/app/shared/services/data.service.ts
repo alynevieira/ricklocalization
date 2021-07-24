@@ -1,31 +1,44 @@
-import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { BehaviorSubject, Observable, pipe } from "rxjs";
+import { filter } from "rxjs/operators";
 
 import { ICharacter } from "src/app/interfaces/character.interface";
-import { environment } from "src/environments/environment";
+import { AlertComponent } from "../components/alert/alert.component";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class DataService {
-  constructor(private http: HttpClient) {}
+  private durationInSeconds = 5; 
+  private $characters = new BehaviorSubject<ICharacter[]>([]);
+  private $currentCharacter = new BehaviorSubject<ICharacter>(null);
 
-  getAll(): Observable<ICharacter[]> {
-  return this.http.get<ICharacter[]>(`${environment.apiUrl}/character`);
+  constructor(private _snackBar: MatSnackBar) {}
+
+  get _characters(): Observable<ICharacter[]> {
+    return this.$characters.asObservable().pipe(filter(res => !!res));
   }
 
-  getById(id: number): Observable<ICharacter> {
-    return this.http.get<ICharacter>(`${environment.apiUrl}/character/` + id);
+  set characters(char: ICharacter[]) {
+    this.$characters.next(char)
   }
 
-  create(character: ICharacter): Observable<ICharacter> {
-    return this.http.post<ICharacter>(`${environment.apiUrl}/character`, character);
+  get _currentCharacter(): Observable<ICharacter> {
+    return this.$currentCharacter.asObservable().pipe(filter(res => !!res));
   }
 
-  update(character: ICharacter): Observable<ICharacter> {
-    return this.http.put<ICharacter>(`${environment.apiUrl}/character/` + character.id, character);
+  set currentCharacter(char: ICharacter) {
+    this.$currentCharacter.next(char)
   }
 
-  delete(id: string): Observable<any> {
-    return this.http.delete<any>(`${environment.apiUrl}/character` + id);
+  openSnackBar(message: string) {
+    this._snackBar.openFromComponent(AlertComponent, {
+      duration: this.durationInSeconds * 1000,
+      horizontalPosition: "right",
+      verticalPosition: "top",
+      data: message
+    });
   }
 }

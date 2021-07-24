@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 import { ICharacter } from "src/app/interfaces/character.interface";
-import { CharacterService } from "src/app/shared/services/character.service";
+import { DataService } from "src/app/shared/services/data.service";
 
 @Component({
   selector: 'app-historic',
@@ -18,19 +18,27 @@ export class HistoricComponent {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private characterService: CharacterService) {}
+    private dataService: DataService) {}
 
   ngOnInit() {
     this.id = parseInt(this.activatedRoute.snapshot.params['id']);
 
-    this.getById();
+    this.initialData();
   }
 
-  getById() {
-    this.characterService.getById(this.id)
+  initialData(): void {
+    this.dataService._currentCharacter
     .subscribe(result => {
-      this.character = result;
-      console.log(this.character)
+      result ? this.character = result : this.getAll();
+    })
+  }
+
+  getAll(): void {
+    this.dataService._characters
+    .subscribe(result => {
+      this.character = result.find(res => res.id === this.id);
+
+      this.dataService.currentCharacter = this.character;
     })
   }
 }

@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { PageEvent } from "@angular/material/paginator";
-import { first } from 'rxjs/operators'
 
 import { ICharacter } from "src/app/interfaces/character.interface";
-import { CharacterService } from "src/app/shared/services/character.service";
+import { DataService } from "src/app/shared/services/data.service";
 
 @Component({
   selector: 'app-character',
@@ -20,24 +19,23 @@ export class CharacterComponent implements OnInit {
   pageSize: number = 6;
   pageSizeOptions: number[] = [3, 6, 9, 12];
 
-  constructor(private characterService: CharacterService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.breakpoint = (window.innerWidth <= 800) ? 1 : 3;
 
-    this.getAll();
+    this.initialData();
   }
 
-  getAll(): void {
-    this.characterService.getAll()
-    .pipe(first())
+  initialData(): void {
+    this.dataService._characters
       .subscribe(result => {
         this.characters = result;
 
         this.pagedList = this.characters.slice(0, 6);
         this.length = this.characters.length;
       }, err => {
-        alert(err)
+        this.dataService.openSnackBar('Algo deu errado! Tente novamente mais tarde.')
       })
   }
 
