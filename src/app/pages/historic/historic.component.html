@@ -1,0 +1,41 @@
+<div class="app-historic">
+  <div class="wrapper">
+
+    <mat-card *ngIf="!!character" class="example-card app-card--height">
+      <span class="app-goback" [routerLink]="['/character', character.id]"> 
+        <mat-icon>arrow_back</mat-icon> 
+        voltar para detalhes
+      </span>
+
+      <mat-card-header class="app-header">
+          <mat-card-title>Histórico</mat-card-title>
+          <mat-card-subtitle>Viagens interdimensionais do {{ character.name }} </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="character.historic.length; else notHeaveTravel">
+          <table mat-table [dataSource]="character.historic" class="mat-elevation-z8 app-table">
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef>Data de registro</th>
+              <td mat-cell *matCellDef="let element">{{ element?.createdAt | date: 'mediumDate' }}</td>
+            </ng-container>
+          
+            <ng-container matColumnDef="dimension">
+              <th mat-header-cell *matHeaderCellDef>Dimensão</th>
+              <td mat-cell *matCellDef="let element"> {{ element.dimensionDestination }} </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+
+        <ng-template #notHeaveTravel>
+          <span style="text-align: center;">
+            <p>Esse Rick não viajou ainda...</p>
+          </span>
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.app-details
+  background: url('src/assets/images/detail.jpg') no-repeat
+  background-position: center
+
+  height: 100vh
+
+.wrapper
+  display: flex
+  align-items: center
+  justify-content: center
+
+  height: 100%
+
+.app-header
+  justify-content: space-between
+  padding: 1rem 0 0 1rem
+
+.app-text-center
+  text-align: center
+
+.app-icons
+  display: flex
+  justify-content: space-between
+
+  > mat-icon
+    border-radius: 50%
+    padding: .5rem
+    cursor: pointer
+
+.app-card--height
+  width: 80%
+  background: #424242de
+
+@media only screen and (min-width: 870px)
+  .app-details
+    background-size: cover
+
+  .app-card--height
+    width: 50%
+  
+  .app-header
+    justify-content: space-between
+    padding: 0 1rem

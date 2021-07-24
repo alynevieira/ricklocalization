@@ -1,0 +1,81 @@
+.app-bg--home
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 100%), url('src/assets/images/wallpaper-home.jpg') no-repeat
+  height: 100vh
+
+.main-text
+  width: 310px
+  position: absolute
+  top: 30%
+  left: 8%
+  border-left: 5px solid #1ea7a1
+  box-sizing: border-box
+  padding: 3rem 1.5rem
+
+.mat-card
+  display: flex
+  flex-direction: column
+
+.mat-card-content
+  flex: 1 1 auto
+
+.app-img
+  height: 11.9rem
+  object-fit: cover
+
+.app-list
+  min-height: 300px
+  padding: 1rem 2rem
+
+  background: rgb(36, 40, 47)
+
+.app-list--dimensions
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+  column-gap: 1.5rem
+  row-gap: 1.5rem
+
+.example-card
+  cursor: pointer
+
+.app-home--title
+  font-size: 2rem
+  font-weight: 500
+
+.app-home--small
+  color: #2f7f16
+  font-weight: 500
+  margin-bottom: 0
+
+.app-list--grid
+  display: grid
+  grid-template-columns: 1fr
+  padding: 0 0 2rem 0
+
+.app-paginator
+  float: right
+
+.app-footer
+  background: rgb(32, 35, 41)
+  color: rgb(158, 158, 158)
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  height: 10vh
+  > p
+    margin-bottom: 0
+
+@media only screen and (min-width: 870px)
+  .app-list
+    padding: 1rem 6rem 3rem
+
+  .main-text
+    width: 480px
+
+  .app-bg--home
+    background-size: cover
+  
+  .app-list--grid  
+    grid-template-columns: 1fr 1fr
+    padding: 2rem 0

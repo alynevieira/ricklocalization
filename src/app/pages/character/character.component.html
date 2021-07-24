@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="app-bg--home">
+    <div class="main-text">
+      <h1 class="app-home--title">Ricks em um só lugar</h1>
+      <p>Encontre todas as versões do Rick & Morty, com suas dimensões de origem e histórico de viagens interdimensionais.</p>
+    </div>
+  </div>
+  
+  <div class="app-list">
+    <div class="app-list--grid">
+        <div>
+          <p class="app-home--small">viagem entre dimensões</p>
+          <h1>Listagem de Ricks</h1>
+        </div>
+        <div class="app-paginator">
+          <mat-paginator 
+            [length]="length"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="OnPageChange($event)">
+          </mat-paginator>
+        </div>
+    </div>
+  
+    <div class="app-list--dimensions" (window:resize)="onResize($event)">
+      <div *ngFor="let character of pagedList">
+        <mat-card matRipple class="example-card" [routerLink]="['/character', character.id]">
+          <img mat-card-image class="app-img" [src]="character.urlImageSmall" alt="Foto rick e morty">
+          <mat-card-header>
+            <mat-card-title>{{ character.name }}</mat-card-title>
+            <mat-card-subtitle style="margin-bottom: 0;">{{ character.dimension }}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="app-footer">
+    <p>© 2021 | Alyne Alice Vieira</p>
+  </footer>
+</div>

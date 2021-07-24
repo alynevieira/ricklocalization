@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+html, body
+  margin: 0
+
+  background: #252525
+  color: #FFFFFF
+
+.app-goback
+  display: flex
+  align-items: flex-start
+  font-weight: 500
+  color: #acc1cb
+
+  cursor: pointer
+
+  > mat-icon
+    padding: 0 .6rem
+
+::-webkit-scrollbar
+  width: 12px
+  background-color: transparent
+
+::-webkit-scrollbar-thumb
+  background-color: #424242
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+  background-color: #424242
+  border: 1px solid #333333
+
+::-webkit-scrollbar-thumb:active
+  background-color: #424242
+  border: 1px solid #333333
+
+@media only screen and (max-width: 869px)
+.mat-paginator-container
+  flex-wrap: initial !important
+  font-size: .6rem

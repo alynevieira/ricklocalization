@@ -1,0 +1,123 @@
+{
+  "character": [
+    {
+      "id": 1,
+      "name": " Rick C-137",
+      "dimension": "Dimensão C-137",
+      "description": "Rick é um cientista gênio, capaz de criar invenções científicas complexas, incluindo capacetes para melhorar o cérebro, dispositivos invasores de sonhos, portais para várias dimensões diferentes, várias armas de energia e campos de força e o primeiro parque de diversões do mundo dentro do corpo de um ser humano . Seu brilho pode ser confundido por suas visões pessoais cansadas e suas tendências alcoólicas. Rick fica entediado facilmente e não se dá bem com a rotina.",
+      "urlImageSmall": "./assets/images/137-small.png",
+      "historic": [
+        {
+          "createdAt": "2021-07-24T05:34:40.232Z",
+          "dimensionDestination": "Dimensão Cronenberg"
+        },
+        {
+          "createdAt": "2021-07-24T05:34:47.125Z",
+          "dimensionDestination": "Dimensão J19ζ7 Zeta 7"
+        },
+        {
+          "createdAt": "2021-07-24T05:34:57.275Z",
+          "dimensionDestination": "Dimensão D-99"
+        },
+        {
+          "createdAt": "2021-07-24T05:35:03.109Z",
+          "dimensionDestination": "Dimensão E-33"
+        },
+        {
+          "createdAt": "2021-07-24T05:38:19.715Z",
+          "dimensionDestination": "Dimensão Cidadela"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Evil Rick Sanchez",
+      "dimension": "Dimensão Cidadela",
+      "description": "Evil Rick Sanchez era um Rick orgânico com implantes cibernéticos (em oposição a um robô completo), e nenhuma de suas palavras ou ações foram realizadas por sua própria vontade, eram todos feitos do Evil Morty, torturando outros Mortys através de 'Evil Rick' para criar ódio contra todos os Ricks.",
+      "urlImageSmall": "./assets/images/evil-rick.jpg",
+      "historic": [
+        {
+          "createdAt": "2021-07-24T05:39:03.618Z",
+          "dimensionDestination": "Dimensão C-137"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cronenberg Rick",
+      "dimension": "Dimensão Cronenberg",
+      "description": "O Cronenberg Rick e o Cronenberg Morty partem depois de acidentalmente transformarem o mundo inteiro em humanos normais. Eles levam um portal para a dimensão C-137 quando descobrem que C-137 Rick transformou quase toda a população da Terra em Cronenberg",
+      "urlImageSmall": "./assets/images/other-small.png",
+      "historic": [
+        {
+          "createdAt": "2021-07-24T05:34:24.459Z",
+          "dimensionDestination": "Dimensão C-137"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Rick Sanchez J-22",
+      "dimension": "Dimensão Cidadela",
+      "description": "Rick Sanchez J-22 viveu uma vida muito entediante como operário de fábrica, esperando ser promovido a uma posição melhor. No fundo, ele sempre teve uma frustração interior trabalhando como um simples operário de fábrica, mesmo que ele fosse quase tão ou tão inteligente quanto todos os Ricks superiores e tenha um conhecimento de tudo no universo. Rick J-22 trabalhava na fábrica desde antes de Morty nascer, então se sua dimensão tivesse um Morty, os dois provavelmente nunca se conheceram.",
+      "urlImageSmall": "./assets/images/Rick-22.png",
+      "historic": []
+    },
+    {
+      "id": 5,
+      "name": "Rick D. Sanchez III",
+      "dimension": "Dimensão Cidadela",
+      "description": "Por ser o proprietário do Simple Rick's Wafers e membro do Shadow Council of Ricks, Rick D. Sanchez III era extremamente rico e poderoso. Depois que um operário de fábrica Rick enlouquece e mata o gerente regional Rick e indiretamente mata Simple Rick, Rick D. Sanchez III aparentemente salva o operário da prisão, ele torna o operário o novo Simple Rick.",
+      "urlImageSmall": "./assets/images/rick-iii.jpg",
+      "historic": []
+    },
+    {
+      "id": 6,
+      "name": "Garment District Rick",
+      "dimension": "Dimensão Cidadela",
+      "description": "Garment District Rick é considerado um empresário de sucesso. Ele declara a intenção do Conselho Sombrio de Ricks de continuar a dominar a Cidadela, como faziam desde antes da criação do Conselho de Ricks. Ele é morto por ordem de Evil Morty, que purgou o Conselho das Sombras.",
+      "urlImageSmall": "./assets/images/rick-garment.png",
+      "historic": []
+    },
+    {
+      "id": 7,
+      "name": "Doofus Rick",
+      "dimension": "Dimensão J19ζ7 Zeta 7",
+      "description": "O Doofus Rick nunca se casou e nunca teve filhos, então seu Morty foi atribuído a ele de outra realidade onde todos se parecem com Eric Stoltz do filme Máscara. Em sua primeira aparição, ele faz amizade com Jerry, e ele parece ser o único Rick que realmente gosta dele.",
+      "urlImageSmall": "./assets/images/doofus-rick.png",
+      "historic": []
+    },
+    {
+      "id": 8,
+      "name": "Cool Rick (K-83)",
+      "dimension": "Dimensão J19ζ7 Zeta 7",
+      "description": "Cool Rick havia chegado recentemente à Cidadela de Ricks quando assumiu o cargo de supervisor na fábrica de biscoitos wafer do Simple Rick, pois outro Rick foi promovido para gerente regional.",
+      "urlImageSmall": "./assets/images/cool-rick.png",
+      "historic": []
+    },
+    {
+      "id": 9,
+      "name": "Rick D-99",
+      "dimension": "Dimensão D-99",
+      "description": "Rick D-99 era um membro da equipe SEAL Ricks que foi enviado pela Cidadela de Ricks para assassinar Rick Sanchez (C-137). Ele estava claramente entre os Ricks mais fortes e perigosos, já que fazia parte de sua unidade de elite de assassinos.",
+      "urlImageSmall": "./assets/images/rick-d99.jpg",
+      "historic": []
+    },
+    {
+      "id": 10,
+      "name": "Afro Rick",
+      "dimension": "Dimensão E-33",
+      "description": "Afro Rick é da dimensão E-33 mas atualmente está nos bastidores durante o debate presidencial, após Juggling Rick ser visto na TV. Ele está em uma discussão acalorada com Cowboy Rick. Ele é visto mais tarde na multidão de Ricks no momento da tentativa de assassinato do Presidente Morty e fica muito chateado após o tiroteio.",
+      "urlImageSmall": "./assets/images/afro-rick.png",
+      "historic": []
+    },
+    {
+      "id": 11,
+      "name": "Rick Simples",
+      "dimension": "Dimensão Terra",
+      "description": "Como pode ser visto através de uma de suas memórias, Rick simples desfrutou de um estilo de vida muito diferente de outros Ricks, pois ele era um pai amoroso, sem qualquer egoísmo aparente ou interesse em ciência pesada e viagens interdimensionais.",
+      "urlImageSmall": "./assets/images/simple-rick.jpg",
+      "historic": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<div class="app-details">
+  <div class="wrapper">
+
+  <mat-card *ngIf="!!character" class="example-card app-card--height">
+    <span class="app-goback" [routerLink]="['/character']"> 
+      <mat-icon>arrow_back</mat-icon> 
+      voltar para listagem
+    </span>
+
+    <mat-card-header class="app-header">
+      <div class="app-text-center">
+        <mat-card-title>{{ character.name }}</mat-card-title>
+        <mat-card-subtitle>{{ character.dimension }}</mat-card-subtitle>
+      </div>
+
+      <div class="app-icons">
+        <mat-icon 
+          matRipple 
+          matRippleCentered="true" 
+          aria-hidden="false" 
+          aria-label="Adicionar viagem"
+          (click)="openDialog()">add</mat-icon>
+
+        <mat-icon 
+          matRipple 
+          matRippleCentered="true" 
+          aria-hidden="false" 
+          aria-label="Histórico de viagens"
+          [routerLink]="['/historic', character.id]">history</mat-icon>
+      </div>
+    </mat-card-header>
+    <mat-card-content style="padding: 0 1rem;">
+      <p>{{ character.description }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  </div>
+</div>
