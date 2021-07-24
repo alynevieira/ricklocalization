@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./src/assets/images/app.png" alt="Tasks Angular" />
+  <img src="./src/assets/images/app.PNG" alt="Rick Localization" />
 
   &#xa0;
 </div>

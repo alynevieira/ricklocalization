@@ -73,7 +73,12 @@
       "dimension": "Dimensão Cidadela",
       "description": "Rick Sanchez J-22 viveu uma vida muito entediante como operário de fábrica, esperando ser promovido a uma posição melhor. No fundo, ele sempre teve uma frustração interior trabalhando como um simples operário de fábrica, mesmo que ele fosse quase tão ou tão inteligente quanto todos os Ricks superiores e tenha um conhecimento de tudo no universo. Rick J-22 trabalhava na fábrica desde antes de Morty nascer, então se sua dimensão tivesse um Morty, os dois provavelmente nunca se conheceram.",
       "urlImageSmall": "./assets/images/Rick-22.png",
-      "historic": []
+      "historic": [
+        {
+          "createdAt": "2021-07-24T15:44:36.596Z",
+          "dimensionDestination": "Dimensão E-33"
+        }
+      ]
     },
     {
       "id": 5,
